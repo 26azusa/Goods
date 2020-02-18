@@ -1,0 +1,118 @@
+@charset "UTF-8";
+
+/*========= base ===========*/
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Yu Gothic", "\6E38\30B4\30B7\30C3\30AF", YuGothic, "\6E38\30B4\30B7\30C3\30AF\4F53", sans-serif;
+  font-weight: 500;
+  color: #333;
+  line-height: 2.0;
+  background-color: #fff;
+}
+
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+ul,
+li,
+dl,
+dt,
+dd {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+a:hover {
+  -webkit-transition: .3s;
+  transition: .3s;
+  opacity: 0.6;
+  text-decoration: none;
+}
+
+section {
+  margin-bottom: 120px;
+}
+
+.container {
+  width: 1400px;
+  margin: 0 auto;
+}
+
+header {
+  width: 100%;
+  background-color: #dcdcdc;
+}
+
+.header-nav {
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.right-nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.left-nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.right-nav ul li {
+  margin-right: 50px;
+}
+
+.left-nav ul li {
+  margin-left: 50px;
+}
+
+.header-nav .logo {
+  font-weight: 600;
+  font-size: 150%;
+}
+
