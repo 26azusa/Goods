@@ -25,7 +25,8 @@
     </head>
     <body>
     <header>
-        <div class ="container header-nav">
+        <div id = "app">
+        <div class ="content-wrapper header-nav">
                 <div class="right-nav">
                     <ul>
                     <li><a class="logo" href="#">GOODS</a></li>
@@ -42,5 +43,10 @@
     </header>
 
     @yield('contents')
+
+    <footer>
+    <p class="footer_logo">(c)GOODS 2020</p>
+    </footer>
+        </div>
     </body>
 </html>
