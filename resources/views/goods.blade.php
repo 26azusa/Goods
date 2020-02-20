@@ -9,7 +9,7 @@
     <h1>GOODS</h1>
     <div class="top_button">
       <ul>
-        <li class="left-button"><a href="#">口コミを見る</a></li>
+        <li class="left-button"><a href="{{  action('ListController@index')  }}">口コミを見る</a></li>
         <li class="right-button"><a href="#">口コミを投稿する</a></li>
       </ul>
     </div>
@@ -42,7 +42,7 @@
       <h4>あなたのレビューが誰かの参考に</h4>
       <p>もちろんあなたの気に入ったグッズを<br>
          みんなにオススメすることもできますよ。<br>
-         みんなとグッズの感想を共有しよう！<br>
+         みんなとグッズの感想を共有しましょう！<br>
          </p>
       </li>
     </ul>
