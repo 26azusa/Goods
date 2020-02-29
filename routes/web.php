@@ -15,5 +15,22 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//ユーザー画面遷移
 Route::get('/', 'GoodsController@index');
 Route::get('/list', 'ListController@index');
+Route::get('/create', 'GoodsController@add')->middleware('auth');
+Route::post('/create', 'GoodsController@create')->middleware('auth');
+Route::get('/detail','DetailController@index');
+
+//管理画面遷移
+Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
+    Route::get('item', 'Admin\ItemController@index');
+    Route::get('create', 'Admin\ItemController@add');
+    Route::post('create', 'Admin\ItemController@create');
+});
+
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

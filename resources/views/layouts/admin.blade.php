@@ -20,6 +20,7 @@
 
         <!-- Style -->
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
         <link href="{{ asset('css/front.css') }}" rel="stylesheet">
 
     </head>
@@ -28,17 +29,14 @@
         <div id = "app">
         <div class ="content-wrapper header-nav">
                 <div class="right-nav">
-                    <ul>
                     <li><a class="logo" href="{{  action('GoodsController@index')  }}">GOODS</a></li>
-                    <li><a class="post" href="{{  action('ListController@index')  }}">口コミを見る</a></li>
-                    </ul>
+                </div>
+                <div class="center-nav">
+                    <li><h5 class="logo">管理者ページ</h5></li>
                 </div>
                 <div class="left-nav">
                 @guest
-                    <ul>
-                    <li><a class="navRegister" href="{{ route('register') }}">新規登録</a></li>
-                    <li><a class="navLogin" href="{{ route('login') }}">ログイン</a></li>
-                    </ul>
+                    <li></lo><a class="navLogin" href="{{ route('login') }}">管理者ログイン</a></li>
                 </div>
 
                 @else

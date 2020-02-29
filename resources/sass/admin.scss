@@ -1,0 +1,39 @@
+/*-------- ITEM REGISTAR --------*/
+.itemRegistar {
+  width: 900px;
+  margin:0 auto;
+  padding: 60px 0;
+}
+
+.itemRegistar h2 {
+  margin-bottom: 30px;
+  border-bottom: solid 1px #dcdcdc;
+  padding-bottom: 5px;
+}
+
+.form-group {
+  display: flex;
+  width: 90%;
+  margin: 20px auto;
+}
+
+.form-group label {
+  margin-right: 50px;
+}
+
+.registerLabel {
+  width: 20%;
+}
+
+.registerContents {
+  width: 80%;
+}
+
+.btn_submit {
+  margin: 0 0 0 auto;
+  padding: 0 20px;
+}
+
+.registerContents select {
+  height: 25px;
+}
