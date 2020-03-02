@@ -6,17 +6,24 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 use App\Item;
+use App\Category;
 
 class ItemController extends Controller
 {
     //アイテム一覧
     public function index(){
+
+
+
         return view('admin.item');
     }
 
     //アイテム投稿画面
     public function add(){
-        return view('admin.create');
+
+        $posts = Category::all();
+
+        return view('admin.create', ['posts' => $posts]);
     }
 
     public function create(Request $request){
@@ -26,15 +33,13 @@ class ItemController extends Controller
         $item = new Item;
         $form = $request->all();
 
-        $path_m = $request->file('item_image_m')->store('public/img');
-        $item->path_m = basename($path_m);
+        $path = $request->file('image')->store('public/img');
+        $item->image_path = basename($path);
 
-        $path_s = $request->file('item_image_s')->store('public/img');
-        $item->path_s = basename($path_s);
+        $item->category_id = $request->category_id;
 
         unset($form['_token']);
-        unset($form['item_image_m']);
-        unset($form['item_image_s']);
+        unset($form['image']);
 
 
         $item->fill($form);

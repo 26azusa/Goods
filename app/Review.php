@@ -18,4 +18,9 @@ class Review extends Model
     {
     return $this->belongsTo('App\User');
     }
+
+    public function item()
+    {
+    return $this->belongsTo('App\Item');
+    }
 }

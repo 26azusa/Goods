@@ -24,9 +24,26 @@
   </div>
 
   <div class="rightContents">
-    <section class="itemList">
-      <h3>ミッキーチョコレート</h3>
+    <section class="itemDetail">
+      <h3>{{ $item_form->name }}</h3>
+      <div class="itemDescription">
+      <img src="{{ asset('storage/img/' . $item_form->image_path) }}">
+      <h5>{{ $item_form->quantity }}入り　{{ $item_form->price }}円</h5>
+      </div>
 
+      <div class="itemReview">
+        <div class="reviewPost">
+        <a href="{{  action('GoodsController@add')  }}" >>> 口コミを投稿する</a>
+        </div>
+        <div class="reviews">
+          @foreach($reviews as $review)
+          <div class="review">
+            <p>{{ $review->user->name }}</p>
+            <p>{{ $review->body }}</p>
+          </div>
+          @endforeach
+        </div>
+      </div>
     </section>
   </div>
 

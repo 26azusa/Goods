@@ -8,15 +8,25 @@ class Item extends Model
 {
     protected $table = 'item';
 
-    protected $guarded =array('item_id');
+    protected $guarded =array('id');
 
     public static $rules = array(
-        'item_name' => 'required',
-        'item_description' => 'required',
-        'item_image_m' => 'required',
-        'item_image_s' => 'required',
-        'item_quantity' => 'required',
-        'item_price' => 'required',
-        'category' => 'required',
+        'name' => 'required',
+        'description' => 'required',
+        'image' => 'required',
+        'quantity' => 'required',
+        'price' => 'required',
+        'category_id' => 'required',
     );
+
+    public function category()
+    {
+        return $this->belongsTo('App\Category');
+    }
+
+    public function reviews()
+    {
+        return $this->hasmany('App\Review');
+    }
+
 }

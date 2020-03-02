@@ -10,7 +10,7 @@
     <div class="top_button">
       <ul>
         <li class="left-button"><a href="{{  action('ListController@index')  }}">口コミを見る</a></li>
-        <li class="right-button"><a href="{{  action('GoodsController@create')  }}">口コミを投稿する</a></li>
+        <li class="right-button"><a href="{{  action('GoodsController@add')  }}">口コミを投稿する</a></li>
       </ul>
     </div>
   </div>

@@ -34,5 +34,14 @@ class GoodsController extends Controller
         return redirect('create');
     }
 
+    public function detail(Request $request){
+
+        $item = Item::find($request->id);
+        if(empty($item)){
+            abort(404);
+        }
+
+        return view('detail',['item_form' => $item, 'reviews' => $item->reviews]);
+    }
 
 }

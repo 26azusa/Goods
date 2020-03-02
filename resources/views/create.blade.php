@@ -43,7 +43,7 @@
           <select name="item_id">
             <option value="">選択してください</option>
             @foreach($posts as $post);
-            <option value="{{ $post->item_id }}">{{ $post->item_name }}</option>
+            <option value="{{ $post->id }}">{{ $post->name }}</option>
             @endforeach
           </select>
           </div>

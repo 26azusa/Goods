@@ -20,7 +20,7 @@ Route::get('/', 'GoodsController@index');
 Route::get('/list', 'ListController@index');
 Route::get('/create', 'GoodsController@add')->middleware('auth');
 Route::post('/create', 'GoodsController@create')->middleware('auth');
-Route::get('/detail','DetailController@index');
+Route::get('/detail','GoodsController@detail');
 
 //管理画面遷移
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){

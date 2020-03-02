@@ -12,8 +12,9 @@
       </div>
       <div class="selectCategory">
         <h5>カテゴリ</h5>
-
-        <input type="radio" class="form-select" name="cond_category"> お菓子<br>
+        @foreach($categories as $category)
+        <input type="radio" class="form-select" name="category_id" value="{{ $category->id }}">{{ $category->name }}<br>
+        @endforeach
         <input type="submit" class="btn_search" value="検索">
 
       </div>
@@ -28,8 +29,8 @@
       <div class="items">
         @foreach($posts as $post)
         <div class="item">
-          <a href ="{{  action('DetailController@index')  }}"><img src="{{ asset('storage/img/' . $post->path_s) }}"></a>
-          <p>{{ $post->item_name }}</p>
+          <a href="{{  action('GoodsController@detail',['id' => $post->id])  }}"><img src="{{ asset('storage/img/' . $post->image_path) }}"></a>
+          <p>{{ $post->name }}</p>
         </div>
         @endforeach
       </div>

@@ -20,55 +20,46 @@
       <div class="form-group">
         <label class="md-col-2 registerLabel">商品名</label>
           <div class="md-col-10 registerContents">
-          <input type="text" class="form-control" name="item_name" value="{{ old('item_name') }}">
+          <input type="text" class="form-control" name="name" value="{{ old('name') }}">
           </div>
       </div>
 
       <div class="form-group">
         <label class="md-col-2 registerLabel">商品説明</label>
           <div class="md-col-10 registerContents">
-          <input type="text" class="form-control" name="item_description" value="{{ old('item_description') }}">
+          <input type="text" class="form-control" name="description" value="{{ old('description') }}">
           </div>
       </div>
 
       <div class="form-group">
-        <label class="md-col-2 registerLabel">商品写真　大</label>
+        <label class="md-col-2 registerLabel">商品写真</label>
         <div class="md-col-10 registerContents">
-          <input type="file" name="item_image_m">
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label class="md-col-2 registerLabel">商品写真　小</label>
-        <div class="md-col-10 registerContents">
-          <input type="file" name="item_image_s">
+          <input type="file" name="image">
         </div>
       </div>
 
       <div class="form-group">
         <label class="md-col-2 registerLabel">商品個数</label>
           <div class="md-col-10 registerContents">
-          <input type="number" name="item_quantity" value="{{ old('item_quantity') }}">
+          <input type="number" name="quantity" value="{{ old('quantity') }}">
           </div>
       </div>
 
       <div class="form-group">
         <label class="md-col-2 registerLabel">商品価格</label>
           <div class="md-col-10 registerContents">
-          <input type="number" name="item_price" value="{{ old('item_price') }}">
+          <input type="number" name="price" value="{{ old('price') }}">
           </div>
       </div>
 
       <div class="form-group">
         <label class="md-col-2 registerLabel">カテゴリ</label>
           <div class="registerContents">
-          <select name="category" maxlength="300">
+          <select name="category_id" maxlength="300">
             <option value="">選択してください</option>
-            <option value="お菓子・食品">お菓子・食品</option>
-            <option value="生活雑貨・インテリア">生活雑貨・インテリア</option>
-            <option value="ぬいぐるみ・おもちゃ">ぬいぐるみ・おもちゃ</option>
-            <option value="文具・ステーショナリー">文具・ステーショナリー</option>
-            <option value="ファッション雑貨">ファッション雑貨</option>
+            @foreach($posts as $post)
+            <option value="{{ $post->id }}">{{ $post->name }}</option>
+            @endforeach
           </select>
           </div>
       </div>

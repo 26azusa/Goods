@@ -224,13 +224,13 @@ footer {
   padding-top: 18px;
 }
 
-/*========= LOGIN ===========*/
+/*========= ログイン ===========*/
 
 .card {
   margin: 50px 0;
 }
 
-/*========= LIST PAGE ===========*/
+/*========= 商品リスト ===========*/
 
 .mainContents {
   display: -webkit-box;
@@ -287,12 +287,60 @@ footer {
 }
 
 .item {
-  width: 20%;
+  width: 25%;
 }
 
 .item img {
   width: 80%;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
   margin-bottom: 10px;
+}
+
+/*-------- 商品詳細 --------*/
+
+.itemDetail h3 {
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.itemDescription {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.itemDescription img {
+  width: 100%;
+  height: 550px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.itemDescription h5 {
+  text-align: right;
+}
+
+.itemReview {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.reviewPost {
+  text-align: right;
+  margin-top: 10px;
+}
+
+.reviews {
+  margin-top: 20px;
+  margin-bottom: 100px;
+}
+
+.review {
+  border: solid 2px #ff8c00;
+  border-radius: 15px;
+  padding: 1rem 20px 0 20px;
 }
 
 /*-------- 口コミ投稿 --------*/
