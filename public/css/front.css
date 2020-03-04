@@ -245,7 +245,7 @@ footer {
 .leftContents {
   width: 15%;
   border-right: solid 1px #dcdcdd;
-  padding-right: 30px;
+  padding-right: 25px;
 }
 
 .rightContents {
@@ -260,7 +260,8 @@ footer {
 .inputKeyWord h5 {
   margin-top: 50px;
   margin-bottom: 15px;
-  border-bottom: solid 1px #dcdcdc;
+  border-bottom: dashed 1px #999999;
+  padding-bottom: 2px;
 }
 
 .inputKeyWord input {
@@ -268,15 +269,29 @@ footer {
   margin-bottom: 10px;
 }
 
-.selectCategory h5 {
+.selectCategories h5 {
   margin-top: 50px;
   margin-bottom: 15px;
-  border-bottom: solid 1px #dcdcdc;
+  border-bottom: dashed 1px #999999;
+  padding-bottom: 1px;
+}
+
+.selectCategories input {
+  margin-bottom: 12px;
+}
+
+.selectCategory {
+  font-size: 0.8rem;
+}
+
+.btn_search {
+  margin-top: 15px;
+  padding: 0 15px;
 }
 
 .itemList h3 {
   margin-top: 50px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .items {
@@ -284,6 +299,8 @@ footer {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
 }
 
 .item {
@@ -300,12 +317,32 @@ footer {
 
 /*-------- 商品詳細 --------*/
 
-.itemDetail h3 {
+.itemTitle {
   margin-top: 50px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.itemDescription {
+.itemTitle h3 {
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.itemTitle .favorite_before {
+  font-size: 0.5rem;
+  margin-left: 30px;
+  padding-top: 12px;
+}
+
+.itemTitle .favorite {
+  color: #ffd700;
+}
+
+.itemDetail {
   width: 90%;
   margin: 0 auto;
 }
@@ -322,11 +359,6 @@ footer {
   text-align: right;
 }
 
-.itemReview {
-  width: 90%;
-  margin: 0 auto;
-}
-
 .reviewPost {
   text-align: right;
   margin-top: 10px;
@@ -338,9 +370,32 @@ footer {
 }
 
 .review {
-  border: solid 2px #ff8c00;
-  border-radius: 15px;
+  border: solid 1px #dedede;
   padding: 1rem 20px 0 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.reviewName {
+  display: inline-block;
+}
+
+.reviewName_after {
+  display: inline-block;
+  font-size: 0.5rem;
+  margin-right: 30px;
+}
+
+.reviewFavorite_before {
+  display: inline-block;
+  font-size: 0.5rem;
+}
+
+.reviewFavorite {
+  display: inline-block;
+  color: #ffd700;
+  font-size: 1rem;
+  font-weight: 600;
 }
 
 /*-------- 口コミ投稿 --------*/

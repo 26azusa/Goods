@@ -40,7 +40,6 @@ class GoodsController extends Controller
         if(empty($item)){
             abort(404);
         }
-
         return view('detail',['item_form' => $item, 'reviews' => $item->reviews]);
     }
 

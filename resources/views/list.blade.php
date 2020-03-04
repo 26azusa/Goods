@@ -11,16 +11,19 @@
           <h5>検索</h5>
           <input type="text" class="form-control" name="cond_name" value="{{ $cond_name }}">
           </div>
-        <div class="selectCategory">
+        <div class="selectCategories">
           <h5>カテゴリ</h5>
 
         @foreach($categories as $category)
-        <input type="radio" class="form-select" name="category_id" value="{{ $category->id }}">{{ $category->name }}<br>
+        <div class="selectCategory">
+        <input type="radio" class="form-select" name="category_id" value="{{ $category->id }}"> {{ $category->name }}
+        </div>
         @endforeach
+        </div>
         {{ csrf_field() }}
         <input type="submit" class="btn_search" value="検索">
       </form>
-      </div>
+
     </section>
 
   </div>
