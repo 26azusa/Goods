@@ -30,7 +30,7 @@
                 <div class="right-nav">
                     <ul>
                     <li><a class="logo" href="{{  action('GoodsController@index')  }}">GOODS</a></li>
-                    <li><a class="post" href="{{  action('ListController@index')  }}">口コミを見る</a></li>
+                    <li><a class="post" href="{{  action('ItemController@list')  }}">口コミを見る</a></li>
                     </ul>
                 </div>
                 <div class="left-nav">

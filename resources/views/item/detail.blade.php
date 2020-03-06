@@ -6,7 +6,7 @@
 <div class="content-wrapper mainContents">
   <div class="leftContents">
     <section class="itemSearch">
-      <form action="{{ action('ListController@index') }}" method="get">
+      <form action="{{ action('ItemController@list') }}" method="get">
         <div class="inputKeyWord">
           <h5>検索</h5>
           <input type="text" class="form-control" name="cond_name" value="{{ $cond_name }}">
@@ -33,39 +33,27 @@
     <div class="itemTitle">
       <h3>{{ $item_form->name }}</h3>
       <h3 class="favorite_rate">みんなの評価：</h3>
-      @switch($favorite_average)
-              @case(5)
-                <span class="star-rating rate5"></span>
-                @break
-              @case(4.5)
-                <span class="star-rating rate4-5"></span>
-                @break
-              @case(4)
-                <span class="star-rating rate4"></span>
-                @break
-              @case(3.5)
-                <span class="star-rating rate3-5"></span>
-                @break
-              @case(3)
-                <span class="star-rating rate3"></span>
-                @break
-              @case(2.5)
-                <span class="star-rating rate2-5"></span>
-                @break
-              @case(2)
-                <span class="star-rating rate2"></span>
-                @break
-              @case(1.5)
-                <span class="star-rating rate1-5"></span>
-                @break
-              @case(1)
-                <span class="star-rating rate1"></span>
-                @break
-              @case(0)
-                <span class="star-rating rate0"></span>
-                @break
-
-      @endswitch
+      @if($favorite_average >= 4.8 && $favorite_average <=5)
+          <span class="star-rating rate5"></span>
+      @elseif($favorite_average >= 4.3 && $favorite_average <=4.7)
+          <span class="star-rating rate4-5"></span>
+      @elseif($favorite_average >= 3.8 && $favorite_average <=4.2)
+          <span class="star-rating rate4"></span>
+      @elseif($favorite_average >= 3.3 && $favorite_average <=3.7)
+          <span class="star-rating rate3-5"></span>
+      @elseif($favorite_average >= 2.8 && $favorite_average <=3.2)
+          <span class="star-rating rate3"></span>
+      @elseif($favorite_average >= 2.3 && $favorite_average <=2.7)
+          <span class="star-rating rate2-5"></span>
+      @elseif($favorite_average >= 1.8 && $favorite_average <=2.2)
+          <span class="star-rating rate2"></span>
+      @elseif($favorite_average >= 1.3 && $favorite_average <=1.7)
+          <span class="star-rating rate1-5"></span>
+      @elseif($favorite_average >= 1 && $favorite_average <=1.2)
+          <span class="star-rating rate1"></span>
+      @else
+           <span class="star-rating rate0"></span>
+      @endif
       </div>
       <p>{{ $item_form->description }}</p>
 
@@ -76,7 +64,7 @@
 
       <div class="itemReview">
         <div class="reviewPost">
-        <a href="{{  action('GoodsController@add')  }}" >>> 口コミを投稿する</a>
+        <a href="{{  action('ReviewController@add')  }}" >>> 口コミを投稿する</a>
         </div>
         <div class="reviews">
 

@@ -6,7 +6,7 @@
 <div class="content-wrapper mainContents">
   <div class="leftContents">
     <section class="itemSearch">
-      <form action="{{ action('ListController@index') }}" method="get">
+      <form action="{{ action('ItemController@list') }}" method="get">
         <div class="inputKeyWord">
           <h5>検索</h5>
           <input type="text" class="form-control" name="cond_name" value="{{ $cond_name }}">
@@ -35,7 +35,7 @@
       <div class="items">
         @foreach($posts as $post)
         <div class="item">
-          <a href="{{  action('GoodsController@detail',['id' => $post->id])  }}"><img src="{{ asset('storage/img/' . $post->image_path) }}"></a>
+          <a href="{{  action('ItemController@detail',['id' => $post->id])  }}"><img src="{{ asset('storage/img/' . $post->image_path) }}"></a>
           <p>{{ $post->name }}</p>
         </div>
         @endforeach

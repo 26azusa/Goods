@@ -17,14 +17,13 @@ Route::get('/', function () {
 
 //ユーザー画面遷移
 Route::get('/', 'GoodsController@index');
-Route::get('/list', 'ListController@index');
-Route::get('/create', 'GoodsController@add')->middleware('auth');
-Route::post('/create', 'GoodsController@create')->middleware('auth');
-Route::get('/detail','GoodsController@detail');
+Route::get('/item/list', 'ItemController@list');
+Route::get('/review/create', 'ReviewController@add')->middleware('auth');
+Route::post('/review/create', 'ReviewController@create')->middleware('auth');
+Route::get('/item/detail','ItemController@detail');
 
 //管理画面遷移
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
-    Route::get('item', 'Admin\ItemController@index');
     Route::get('create', 'Admin\ItemController@add');
     Route::post('create', 'Admin\ItemController@create');
 });

@@ -6,7 +6,7 @@
 <div class="content-wrapper mainContents">
   <div class="leftContents">
     <section class="itemSearch">
-      <form action="{{ action('ListController@index') }}" method="get">
+      <form action="{{ action('ItemController@list') }}" method="get">
         <div class="inputKeyWord">
           <h5>検索</h5>
           <input type="text" class="form-control" name="cond_name" value="{{ $cond_name }}">
@@ -32,7 +32,7 @@
     <section class="itemReviews">
       <h3>　口コミを投稿する</h3>
 
-      <form action="{{ action('GoodsController@create') }}" method="post" enctype="multipart/form-data">
+      <form action="{{ action('ReviewController@create') }}" method="post" enctype="multipart/form-data">
 
       @if(count($errors) > 0 )
         <ul>

@@ -9,8 +9,8 @@
     <h1>GOODS</h1>
     <div class="top_button">
       <ul>
-        <li class="left-button"><a href="{{  action('ListController@index')  }}">口コミを見る</a></li>
-        <li class="right-button"><a href="{{  action('GoodsController@add')  }}">口コミを投稿する</a></li>
+        <li class="left-button"><a href="{{  action('ItemController@list')  }}">口コミを見る</a></li>
+        <li class="right-button"><a href="{{  action('ReviewController@add')  }}">口コミを投稿する</a></li>
       </ul>
     </div>
   </div>

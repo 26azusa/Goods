@@ -315,7 +315,7 @@ $rate2-5: ($starFull * 2) + $starHalf + 4px;
 $rate2: $starFull * 2 + 2px;
 $rate1-5: ($starFull * 1) + $starHalf + 2px;
 $rate1: $starFull * 1;
-$rate0: $starFull * 0;
+$rate0: 0;
 
 
 .star-rating {
