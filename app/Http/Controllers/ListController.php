@@ -26,6 +26,6 @@ class ListController extends Controller
             $posts = Item::all();
         }
 
-        return view('list', ['posts' => $posts, 'categories' => $categories, 'cond_name' => $cond_name, 'catedory_id' => $category_id]);
+        return view('list', ['posts' => $posts, 'categories' => $categories, 'cond_name' => $cond_name, 'catedory_id' => $category_id,]);
     }
 }

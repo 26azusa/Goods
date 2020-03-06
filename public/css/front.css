@@ -172,6 +172,10 @@ header {
   font-weight: 600;
 }
 
+.nav-link .san {
+  font-size: 0.5rem;
+}
+
 .greeting {
   width: 100%;
 }
@@ -332,14 +336,132 @@ footer {
   display: inline-block;
 }
 
-.itemTitle .favorite_before {
+.itemTitle .favorite_rate {
   font-size: 0.5rem;
   margin-left: 30px;
   padding-top: 12px;
 }
 
-.itemTitle .favorite {
+.star-rating {
+  position: relative;
+  display: inline-block;
+  width: 125px;
+  height: 25px;
+  font-size: 25px;
+}
+
+.star-rating:before,
+.star-rating:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '\2605\2605\2605\2605\2605';
+  display: inline-block;
+  line-height: 25px;
+}
+
+.star-rating:before {
+  color: #ddd;
+  letter-spacing: 2px;
+}
+
+.star-rating:after {
   color: #ffd700;
+  overflow: hidden;
+  white-space: nowrap;
+  letter-spacing: 2px;
+}
+
+.rate5:after {
+  width: 133px;
+}
+
+.rate4-5:after {
+  width: 120.5px;
+}
+
+.rate4:after {
+  width: 106px;
+}
+
+.rate3-5:after {
+  width: 93.5px;
+}
+
+.rate3:after {
+  width: 79px;
+}
+
+.rate2-5:after {
+  width: 66.5px;
+}
+
+.rate2:after {
+  width: 52px;
+}
+
+.rate1-5:after {
+  width: 39.5px;
+}
+
+.rate1:after {
+  width: 25px;
+}
+
+.rate0:after {
+  width: 0px;
+}
+
+.r-star-rating {
+  position: relative;
+  display: inline-block;
+  width: 85px;
+  height: 17px;
+  font-size: 17px;
+}
+
+.r-star-rating:before,
+.r-star-rating:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '\2605\2605\2605\2605\2605';
+  display: inline-block;
+  line-height: 17px;
+}
+
+.r-star-rating:before {
+  color: #ddd;
+}
+
+.r-star-rating:after {
+  color: #ffd700;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.r-rate5:after {
+  width: 85px;
+}
+
+.r-rate4:after {
+  width: 68px;
+}
+
+.r-rate3:after {
+  width: 51px;
+}
+
+.r-rate2:after {
+  width: 34px;
+}
+
+.r-rate1:after {
+  width: 17px;
+}
+
+.r-rate0:after {
+  width: 0px;
 }
 
 .itemDetail {
@@ -357,15 +479,11 @@ footer {
 
 .itemDescription h5 {
   text-align: right;
-}
-
-.reviewPost {
-  text-align: right;
-  margin-top: 10px;
+  margin-bottom: 15px;
 }
 
 .reviews {
-  margin-top: 20px;
+  margin-top: 10px;
   margin-bottom: 100px;
 }
 
@@ -386,7 +504,7 @@ footer {
   margin-right: 30px;
 }
 
-.reviewFavorite_before {
+.reviewFavorite_rate {
   display: inline-block;
   font-size: 0.5rem;
 }
@@ -396,6 +514,10 @@ footer {
   color: #ffd700;
   font-size: 1rem;
   font-weight: 600;
+}
+
+.reviewPost a {
+  color: #ff6600;
 }
 
 /*-------- 口コミ投稿 --------*/

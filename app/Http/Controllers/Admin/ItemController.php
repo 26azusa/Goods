@@ -41,7 +41,6 @@ class ItemController extends Controller
         unset($form['_token']);
         unset($form['image']);
 
-
         $item->fill($form);
         $item->save();
 

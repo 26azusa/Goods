@@ -41,7 +41,7 @@
       <div class="form-group">
         <label class="md-col-2 registerLabel">商品個数</label>
           <div class="md-col-10 registerContents">
-          <input type="number" name="quantity" value="{{ old('quantity') }}">
+          <input type="text" name="quantity" value="{{ old('quantity') }}">
           </div>
       </div>
 

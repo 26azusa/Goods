@@ -141,6 +141,10 @@ header {
   font-weight:600;
 }
 
+.nav-link .san {
+  font-size: 0.5rem;
+}
+
 
 .greeting {
   width: 100%;
@@ -293,14 +297,135 @@ footer {
 
 }
 
-.itemTitle .favorite_before {
+.itemTitle .favorite_rate {
   font-size: 0.5rem;
   margin-left: 30px;
   padding-top: 12px;
 }
 
-.itemTitle .favorite {
-  color: #ffd700;
+$starFull: 25px;
+$starHalf: $starFull/2;
+
+$rate5: $starFull * 5 + 8px;
+$rate4-5: ($starFull * 4) + $starHalf+ 8px;
+$rate4: $starFull * 4 + 6px;
+$rate3-5: ($starFull * 3) + $starHalf + 6px;
+$rate3: $starFull * 3 + 4px;
+$rate2-5: ($starFull * 2) + $starHalf + 4px;
+$rate2: $starFull * 2 + 2px;
+$rate1-5: ($starFull * 1) + $starHalf + 2px;
+$rate1: $starFull * 1;
+$rate0: $starFull * 0;
+
+
+.star-rating {
+  position: relative;
+  display: inline-block;
+  width: $starFull * 5;
+  height: $starFull;
+  font-size: $starFull;
+  &:before,&:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '★★★★★';
+    display: inline-block;
+    line-height: $starFull;
+  }
+  &:before {
+    color: #ddd;
+    letter-spacing: 2px;
+  }
+  &:after {
+    color: #ffd700;
+    overflow: hidden;
+    white-space: nowrap;
+    letter-spacing: 2px;
+  }
+}
+
+.rate5:after {
+  width: $rate5;
+
+}
+.rate4-5:after {
+  width: $rate4-5;
+}
+.rate4:after {
+  width: $rate4;
+}
+.rate3-5:after {
+  width: $rate3-5;
+}
+.rate3:after {
+  width: $rate3;
+}
+.rate2-5:after {
+  width: $rate2-5;
+}
+.rate2:after {
+  width: $rate2;
+}
+.rate1-5:after {
+  width: $rate1-5;
+}
+.rate1:after {
+  width: $rate1;
+}
+.rate0:after {
+  width: $rate0;
+}
+
+$r-starFull: 17px;
+
+$r-rate5: $r-starFull * 5;
+$r-rate4: $r-starFull * 4;
+$r-rate3: $r-starFull * 3;
+$r-rate2: $r-starFull * 2;
+$r-rate1: $r-starFull * 1;
+$r-rate0: $r-starFull * 0;
+
+.r-star-rating {
+  position: relative;
+  display: inline-block;
+  width: $r-starFull * 5;
+  height: $r-starFull;
+  font-size: $r-starFull;
+  &:before,&:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '★★★★★';
+    display: inline-block;
+    line-height: $r-starFull;
+  }
+  &:before {
+    color: #ddd;
+  }
+  &:after {
+    color: #ffd700;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+}
+
+.r-rate5:after {
+  width: $r-rate5;
+}
+.r-rate4:after {
+  width: $r-rate4;
+}
+.r-rate3:after {
+  width: $r-rate3;
+}
+.r-rate2:after {
+  width: $r-rate2;
+}
+.r-rate1:after {
+  width: $r-rate1;
+}
+.r-rate0:after {
+  width: $r-rate0;
 }
 
 
@@ -318,16 +443,12 @@ footer {
 
 .itemDescription h5 {
   text-align: right;
+  margin-bottom: 15px;
 }
 
-
-.reviewPost {
-  text-align: right;
-  margin-top: 10px;
-}
 
 .reviews {
-  margin-top: 20px;
+  margin-top: 10px;
   margin-bottom: 100px;
 }
 
@@ -348,7 +469,7 @@ footer {
   margin-right: 30px;
 }
 
-.reviewFavorite_before{
+.reviewFavorite_rate{
   display: inline-block;
   font-size: 0.5rem;
 }
@@ -358,6 +479,10 @@ footer {
   color: #ffd700;
   font-size: 1rem;
   font-weight: 600;
+}
+
+.reviewPost a {
+  color: #ff6600;
 }
 
 

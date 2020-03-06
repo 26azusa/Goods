@@ -6,19 +6,24 @@
 <div class="content-wrapper mainContents">
   <div class="leftContents">
     <section class="itemSearch">
-      <div class="inputKeyWord">
-        <h5>検索</h5>
-        <input type="text" class="form-control" name="cond_name">
-      </div>
-      <div class="selectCategories">
-        <h5>カテゴリ</h5>
-        <input type="radio" class="form-select" name="cond_category"> お菓子<br>
-        <input type="radio" class="form-select" name="cond_category"> おもちゃ<br>
-        <input type="radio" class="form-select" name="cond_category"> 文房具<br>
-        <input type="radio" class="form-select" name="cond_category"> 日用品<br>
-        <input type="radio" class="form-select" name="cond_category"> キーホルダー<br>
+      <form action="{{ action('ListController@index') }}" method="get">
+        <div class="inputKeyWord">
+          <h5>検索</h5>
+          <input type="text" class="form-control" name="cond_name" value="{{ $cond_name }}">
+          </div>
+        <div class="selectCategories">
+          <h5>カテゴリ</h5>
+
+        @foreach($categories as $category)
+        <div class="selectCategory">
+        <input type="radio" class="form-select" name="category_id" value="{{ $category->id }}"> {{ $category->name }}
+        </div>
+        @endforeach
+        </div>
+        {{ csrf_field() }}
         <input type="submit" class="btn_search" value="検索">
-      </div>
+      </form>
+
     </section>
 
   </div>
@@ -27,8 +32,40 @@
     <section class="itemDetail">
     <div class="itemTitle">
       <h3>{{ $item_form->name }}</h3>
-      <h3 class="favorite_before">みんなの評価：</h3>
-      <h3 class="favorite">★★★★★</h3>
+      <h3 class="favorite_rate">みんなの評価：</h3>
+      @switch($favorite_average)
+              @case(5)
+                <span class="star-rating rate5"></span>
+                @break
+              @case(4.5)
+                <span class="star-rating rate4-5"></span>
+                @break
+              @case(4)
+                <span class="star-rating rate4"></span>
+                @break
+              @case(3.5)
+                <span class="star-rating rate3-5"></span>
+                @break
+              @case(3)
+                <span class="star-rating rate3"></span>
+                @break
+              @case(2.5)
+                <span class="star-rating rate2-5"></span>
+                @break
+              @case(2)
+                <span class="star-rating rate2"></span>
+                @break
+              @case(1.5)
+                <span class="star-rating rate1-5"></span>
+                @break
+              @case(1)
+                <span class="star-rating rate1"></span>
+                @break
+              @case(0)
+                <span class="star-rating rate0"></span>
+                @break
+
+      @endswitch
       </div>
       <p>{{ $item_form->description }}</p>
 
@@ -47,19 +84,28 @@
           <div class="review">
             <p class="reviewName">{{ $review->user->name }}</p>
             <p class="reviewName_after">さん</p>
-            <p class="reviewFavorite_before">評価：</p>
+            <p class="reviewFavorite_rate">評価：</p>
             <div class="reviewFavorite">
-            @if($review->favorite == 5)
-              <p>★★★★★</p>
-            @elseif($review->favorite == 4)
-              <p>★★★★☆</p>
-            @elseif($review->favorite == 3)
-              <p>★★★☆☆</p>
-            @elseif($review->favorite == 2)
-              <p>★★☆☆☆</p>
-            @elseif($review->favorite == 1)
-              <p>★☆☆☆☆</p>
-            @endif
+            @switch($review->favorite)
+              @case(5)
+                <span class="r-star-rating r-rate5"></span>
+                @break
+              @case(4)
+                <span class="r-star-rating r-rate4"></span>
+                @break
+              @case(3)
+                <span class="r-star-rating r-rate3"></span>
+                @break
+              @case(2)
+                <span class="r-star-rating r-rate2"></span>
+                @break
+              @case(1)
+                <span class="r-star-rating r-rate1"></span>
+                @break
+              @case(0)
+                <span class="r-star-rating r-rate0"></span>
+                @break
+            @endswitch
             </div>
             <p>{{ $review->body }}</p>
           </div>

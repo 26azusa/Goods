@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Review;
 use App\Item;
+use App\Category;
 
 class GoodsController extends Controller
 {
@@ -13,11 +14,15 @@ class GoodsController extends Controller
         return view('goods');
     }
 
-    public function add(){
+    public function add(Request $request){
 
         $posts = Item::all();
 
-        return view('create' , ['posts' => $posts]);
+
+        $cond_name = $request->cond_name;
+        $categories = Category::all();
+
+        return view('create' , ['posts' => $posts,'cond_name' => $cond_name ,'categories' => $categories]);
     }
 
     public function create(Request $request){
@@ -40,7 +45,18 @@ class GoodsController extends Controller
         if(empty($item)){
             abort(404);
         }
-        return view('detail',['item_form' => $item, 'reviews' => $item->reviews]);
+
+        $cond_name = $request->cond_name;
+        $categories = Category::all();
+
+        $favorite_total = 0;
+        foreach($item->reviews as $review){
+             $favorite_total += $review->favorite;
+         }
+         $favorite_average = $favorite_total / count($item->reviews);
+
+        return view('detail',['item_form' => $item, 'reviews' => $item->reviews, 'cond_name' => $cond_name ,'categories' => $categories,
+                    'favorite_average' => $favorite_average]);
     }
 
 }

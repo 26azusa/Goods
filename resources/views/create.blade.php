@@ -6,19 +6,24 @@
 <div class="content-wrapper mainContents">
   <div class="leftContents">
     <section class="itemSearch">
-      <div class="inputKeyWord">
-        <h5>検索</h5>
-        <input type="text" class="form-control" name="cond_name">
-      </div>
-      <div class="selectCategory">
-        <h5>カテゴリ</h5>
-        <input type="radio" class="form-select" name="cond_category"> お菓子<br>
-        <input type="radio" class="form-select" name="cond_category"> おもちゃ<br>
-        <input type="radio" class="form-select" name="cond_category"> 文房具<br>
-        <input type="radio" class="form-select" name="cond_category"> 日用品<br>
-        <input type="radio" class="form-select" name="cond_category"> キーホルダー<br>
+      <form action="{{ action('ListController@index') }}" method="get">
+        <div class="inputKeyWord">
+          <h5>検索</h5>
+          <input type="text" class="form-control" name="cond_name" value="{{ $cond_name }}">
+          </div>
+        <div class="selectCategories">
+          <h5>カテゴリ</h5>
+
+        @foreach($categories as $category)
+        <div class="selectCategory">
+        <input type="radio" class="form-select" name="category_id" value="{{ $category->id }}"> {{ $category->name }}
+        </div>
+        @endforeach
+        </div>
+        {{ csrf_field() }}
         <input type="submit" class="btn_search" value="検索">
-      </div>
+      </form>
+
     </section>
 
   </div>
