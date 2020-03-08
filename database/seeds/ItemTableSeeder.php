@@ -12,7 +12,7 @@ class ItemTableSeeder extends Seeder
     public function run()
     {
          DB::table('item')->insert([
-             ['id' => '1',
+             [
               'name' => 'パスタスナック',
               'description' => 'カリカリ食感でおつまみにぴったりなスナックです。',
               'image_path' => '64GLWUHOhXvJQM2ESXrYtCtzY576e5RPkLPQYo45.jpeg',
@@ -22,7 +22,7 @@ class ItemTableSeeder extends Seeder
               'created_at' => date('Y-m-d H:i:s'),
               'updated_at' => date('Y-m-d H:i:s'),
             ],
-            ['id' => '2',
+            [
               'name' => 'ボールペンセット',
               'description' => 'パークフードをモチーフにしたボールペンです。',
               'image_path' => 'AHL6RnuVNqhec7qGYc9RhwBUdneJzSpcHeCd9Waf.jpeg',
