@@ -9,7 +9,7 @@ return [
 
     //新規登録
     'Register' => '新規登録',
-    'Name' => 'ユーザーID',
+    'Name' => '名前',
     'Confirm Password' => 'パスワード（再入力）',
     'Forgot Your Password?' => 'パスワードを忘れた方はこちら',
 
