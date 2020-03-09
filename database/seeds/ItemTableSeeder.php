@@ -11,6 +11,7 @@ class ItemTableSeeder extends Seeder
      */
     public function run()
     {
+      /*
          DB::table('item')->insert([
              [
               'name' => 'パスタスナック',
@@ -33,6 +34,6 @@ class ItemTableSeeder extends Seeder
               'updated_at' => date('Y-m-d H:i:s'),
             ],
 
-        ]);
+        ]);*/
     }
 }
