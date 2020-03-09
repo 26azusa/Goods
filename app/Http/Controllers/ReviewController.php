@@ -12,7 +12,7 @@ class ReviewController extends Controller
 {
     public function add(Request $request){
 
-        $posts = Item::all();
+        $posts = Item::orderBy('id')->get();
 
 
         $cond_name = $request->cond_name;
@@ -32,6 +32,6 @@ class ReviewController extends Controller
         $review->fill($form);
         $review->save();
 
-        return redirect('review/create');
+        return redirect('item/list');
     }
 }

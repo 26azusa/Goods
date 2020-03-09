@@ -331,6 +331,7 @@ footer {
 
 .item {
   width: 25%;
+  margin-bottom: 20px;
 }
 
 .item img {
