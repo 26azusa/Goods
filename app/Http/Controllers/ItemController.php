@@ -19,13 +19,13 @@ class ItemController extends Controller
         $category_id = $request->category_id;
 
         if(!empty($cond_name) && !empty($category_id)){
-            $posts = Item::where('name','like',"%$cond_name%")->where('category_id',$category_id)->get();
+            $posts = Item::where('name','like',"%$cond_name%")->where('category_id',$category_id)->orderBy('id')->get();
         }else if(!empty($cond_name)){
-            $posts = Item::where('name','like',"%$cond_name%")->get();
+            $posts = Item::where('name','like',"%$cond_name%")->orderBy('id')->get();
         }else if(!empty($category_id)){
-            $posts = Item::where('category_id',$category_id)->get();
+            $posts = Item::where('category_id',$category_id)->orderBy('id')->get();
         }else {
-            $posts = Item::all();
+            $posts = Item::orderBy('id')->get();
         }
 
         return view('item.list', ['posts' => $posts, 'categories' => $categories, 'cond_name' => $cond_name, 'catedory_id' => $category_id,]);
