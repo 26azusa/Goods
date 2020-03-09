@@ -24,8 +24,11 @@ Route::get('/item/detail','ItemController@detail');
 
 //管理画面遷移
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
+    Route::get('/', 'Admin\ItemController@index');
     Route::get('create', 'Admin\ItemController@add');
     Route::post('create', 'Admin\ItemController@create');
+    Route::get('edit', 'Admin\ItemController@edit');
+    Route::post('edit', 'Admin\ItemController@update');
 });
 
 

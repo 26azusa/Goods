@@ -19,6 +19,14 @@ class Item extends Model
         'category_id' => 'required',
     );
 
+    public static $editRules = array(
+        'name' => 'required',
+        'description' => 'required',
+        'quantity' => 'required',
+        'price' => 'required',
+        'category_id' => 'required',
+    );
+
     public function category()
     {
         return $this->belongsTo('App\Category');

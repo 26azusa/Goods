@@ -117,7 +117,7 @@ header {
 
 .mainvisual img {
   width: 100%;
-  height: 500px;
+  height: 550px;
   object-fit: cover;
 }
 
@@ -171,6 +171,26 @@ header {
   margin-bottom:13px;
   height: 260px;
 }
+
+
+.sa {
+  opacity: 0;
+  transition: all .8s ease;
+}
+
+.sa.show {
+  opacity: 1;
+  transform: none;
+}
+
+.sa--scaleUp {
+  transform: scale(.8);
+}
+
+.sa--up {
+  transform: translate(0, 100px);
+}
+
 
 .greeting h4 {
   margin-bottom: 5px;
