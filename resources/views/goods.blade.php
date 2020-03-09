@@ -28,7 +28,7 @@
          アトラクションやパレードの待ち時間など<br>
          いつでもどこでも、お土産の情報をチェックできます！</p>
       </li>
-      <li class="sa sa--scaleUp" data-sa_delay="200">
+      <li class="sa sa--scaleUp" data-sa_delay="300">
       <figure><img src="{{ asset('img/greeting_img2.jpg') }}"></figure>
       <h4>みんなの口コミがグッズを評価</h4>
       <p>お菓子などのフード商品は<br>
@@ -37,7 +37,7 @@
          美味しくて間違いないお土産を購入できます！
          </p>
       </li>
-      <li class="sa sa--scaleUp" data-sa_delay="400">
+      <li class="sa sa--scaleUp" data-sa_delay="600">
       <figure class="sa sa--scaleUp"><img src="{{ asset('img/greeting_img3.jpg') }}"></figure>
       <h4>あなたのレビューが誰かの参考に</h4>
       <p>もちろんあなたの気に入ったグッズを<br>

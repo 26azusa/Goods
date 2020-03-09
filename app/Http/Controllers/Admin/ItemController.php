@@ -45,7 +45,7 @@ class ItemController extends Controller
         $item->fill($form);
         $item->save();
 
-        return redirect('admin/index');
+        return redirect('admin/');
     }
 
     public function edit(Request $request){

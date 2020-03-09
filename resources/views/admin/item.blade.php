@@ -5,7 +5,10 @@
 <div class="adminItemIndex">
             <div class="list-item col-md-12 mx-auto">
                 <div class="row">
+                <div class="list-nav">
                 <h3>現在登録している商品</h3>
+                <span><a role="button" href="{{ action('Admin\ItemController@add') }}">新規投稿</a></span>
+                </div>
                     <table class="table">
                         <thead>
                             <tr>

@@ -34,7 +34,7 @@
 
       <div class="items">
         @foreach($posts as $post)
-        <div class="item sa sa--scaleUp">
+        <div class="item sa sa sa--scaleUp">
           <a href="{{  action('ItemController@detail',['id' => $post->id])  }}"><img src="{{ $post->image_path }}"></a>
           <p>{{ $post->name }}</p>
         </div>
