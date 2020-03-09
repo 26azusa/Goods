@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Category;
 use App\Item;
 use App\Review;
+use Storage;
 
 class ItemController extends Controller
 {

@@ -82,9 +82,7 @@
         </form>
     </section>
   </div>
-<script>
-window.alert('投稿が完了しました');
-</script>
+
 
 </div>
 

@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 
 use App\Item;
 use App\Category;
+use Storage;
 
 class ItemController extends Controller
 {
@@ -33,8 +34,8 @@ class ItemController extends Controller
         $item = new Item;
         $form = $request->all();
 
-        $path = $request->file('image')->store('public/img');
-        $item->image_path = basename($path);
+        $path = Storage::disk('s3')->putFile('/',$form['image'],'public');
+        $item->image_path = Storage::disk('s3')->url($path);
 
         $item->category_id = $request->category_id;
 

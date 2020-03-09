@@ -58,7 +58,7 @@
       <p>{{ $item_form->description }}</p>
 
       <div class="itemDescription">
-      <img src="{{ asset('storage/img/' . $item_form->image_path) }}">
+      <img src="{{ $item_form->image_path }}">
       <h5>{{ $item_form->quantity }}入り　{{ $item_form->price }}円</h5>
       </div>
 

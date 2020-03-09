@@ -35,7 +35,7 @@
       <div class="items">
         @foreach($posts as $post)
         <div class="item">
-          <a href="{{  action('ItemController@detail',['id' => $post->id])  }}"><img src="{{ asset('storage/img/' . $post->image_path) }}"></a>
+          <a href="{{  action('ItemController@detail',['id' => $post->id])  }}"><img src="{{ $post->image_path }}"></a>
           <p>{{ $post->name }}</p>
         </div>
         @endforeach
