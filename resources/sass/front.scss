@@ -60,7 +60,7 @@ header {
 }
 
 .header-nav {
-  width: 1240px;
+  width: 87%;
   height: 70px;
   display: flex;
   justify-content: space-between;
@@ -93,52 +93,46 @@ header {
 }
 
 .mainvisual {
-  position: relative;
-  height: 600%;
+  height: 550px;
+  background: url("/img/top_img.jpg");
+  background-size: cover;
+  background-position: center;
+  padding-top: 160px
 }
 
-.mainvisual h4 {
-  position: absolute;
-  top: 33%;
-  left: 37.5%;
+.top_message {
+  text-align: center;
   color: #fff;
   font-weight: 600;
   font-size: 1.7rem;
 }
 
-.mainvisual h1 {
-  position: absolute;
-  top: 41%;
-  left: 38%;
+.top_logo {
+  text-align: center;
   color: #fff;
   font-weight: 800;
   font-size: 6rem;
-}
-
-.mainvisual img {
-  width: 100%;
-  height: 550px;
-  object-fit: cover;
+  margin: 20px 0;
 }
 
 .top_button ul{
   display: flex;
   justify-content: space-between;
-  width: 25%;
+  width: 360px;
   margin: 0 auto;
-  position: absolute;
-  top: 66%;
-  left: 38%;
 }
 
 .top_button li a {
   display: inline-block;
-  padding: 5px 25px;
-  border: solid 2px #fff;
+  padding: 4px 28px;
+  border: solid 3px #fff;
   border-radius: 10px;
   color: #fff;
-  font-size:17px;
-  font-weight:600;
+  font-size: 1rem;
+}
+
+.nav-link {
+  padding: 0;
 }
 
 .nav-link .san {
@@ -225,7 +219,7 @@ footer {
 .mainContents {
   display: flex;
   justify-content: space-between;
-  width: 1240px;
+  width: 87%;
 }
 
 .leftContents {

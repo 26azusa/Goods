@@ -4,15 +4,15 @@
 @section('contents')
 <section class ="mainvisual">
   <div class="content-wrapper">
-    <img class="top_image" src="{{ asset('img/top_img.jpg') }}" alt="ディズニーランド">
-    <h4 class="sa sa--up" >ディズニーお土産口コミサイト</h4>
-    <h1 class="sa sa--up" data-sa_delay="300">GOODS</h1>
-    <div class="top_button">
-      <ul class="sa sa--up" data-sa_delay="600">
-        <li class="left-button"><a href="{{  action('ItemController@list')  }}">口コミを見る</a></li>
-        <li class="right-button"><a href="{{  action('ReviewController@add')  }}">口コミを投稿する</a></li>
-      </ul>
-    </div>
+    <!-- <img class="top_image" src="{{ asset('img/top_img.jpg') }}" alt="ディズニーランド"> -->
+      <h4 class="top_message sa sa--up" >ディズニーお土産口コミサイト</h4>
+      <h1 class="top_logo sa sa--up" data-sa_delay="300">GOODS</h1>
+      <div class="top_button">
+        <ul class="sa sa--up" data-sa_delay="600">
+          <li class="left-button"><a href="{{  action('ItemController@list')  }}">口コミを見る</a></li>
+          <li class="right-button"><a href="{{  action('ReviewController@add')  }}">口コミを投稿する</a></li>
+        </ul>
+      </div>
   </div>
 </section>
 

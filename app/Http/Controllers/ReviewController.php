@@ -14,7 +14,6 @@ class ReviewController extends Controller
 
         $posts = Item::orderBy('id')->get();
 
-
         $cond_name = $request->cond_name;
         $categories = Category::all();
 
