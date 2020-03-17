@@ -42,8 +42,7 @@ class ItemController extends Controller
         unset($form['_token']);
         unset($form['image']);
 
-        $item->fill($form);
-        $item->save();
+        $item->fill($form)->save();
 
         return redirect('admin/');
     }
@@ -51,7 +50,9 @@ class ItemController extends Controller
     public function edit(Request $request){
 
         $categories = Category::all();
+
         $item = Item::find($request->id);
+
         if (empty($item)) {
             abort(404);
         }
@@ -67,25 +68,17 @@ class ItemController extends Controller
         $item = Item::find($request->id);
         $item_edit = $request->all();
 
-        if ($request->remove == 'true') {
-            $item_edit['image_path'] = null;
-        }else if($request->file('image')){
+        if($request->file('image')){
             $path = Storage::disk('s3')->putFile('/',$item_edit['image'],'public');
             $item->image_path = Storage::disk('s3')->url($path);
         }else {
             $item_edit['image_path'] = $item->image_path;
         }
-        //dd($item_edit);
-        //$item_edit->category_id = 1;
 
             unset($item_edit['_token']);
             unset($item_edit['image']);
-            unset($item_edit['remove']);
 
             $item->fill($item_edit)->save();
-
-
-
 
         return redirect('admin/');
     }

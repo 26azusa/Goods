@@ -11,6 +11,7 @@ use Storage;
 
 class ItemController extends Controller
 {
+    //商品リスト表示
     public function list(Request $request){
 
         $categories = Category::all();
@@ -31,6 +32,7 @@ class ItemController extends Controller
         return view('item.list', ['posts' => $posts, 'categories' => $categories, 'cond_name' => $cond_name, 'catedory_id' => $category_id,]);
     }
 
+    //商品詳細表示
     public function detail(Request $request){
 
         $item = Item::find($request->id);

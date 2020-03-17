@@ -1,10 +1,7 @@
 @charset "UTF-8";
-
 /*========= レスポンシブ対応用SCSS ===========*/
-
 @media screen and (min-width: 480px) {
   /*　for iPhone Landscape　(iPhone 横)　*/
-
   .mainvisual {
     height: 450px;
     padding-top: 120px;
@@ -13,7 +10,6 @@
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   /*　for iPad 　*/
-
   .mainvisual {
     height: 450px;
     padding-top: 120px;
@@ -23,4 +19,3 @@
 @media screen and (min-width: 1024px) and (max-width: 1250px) {
   /*　for PC　*/
 }
-

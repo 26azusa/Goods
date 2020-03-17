@@ -1,7 +1,5 @@
 @charset "UTF-8";
-
 /*========= base ===========*/
-
 html {
   margin: 0;
   padding: 0;
@@ -17,10 +15,7 @@ body {
   background-color: #fff;
 }
 
-h2,
-h3,
-h4,
-h5 {
+h2, h3, h4, h5 {
   margin: 0;
   padding: 0;
 }
@@ -30,11 +25,7 @@ img {
   vertical-align: bottom;
 }
 
-ul,
-li,
-dl,
-dt,
-dd {
+ul, li, dl, dt, dd {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -244,13 +235,11 @@ footer {
 }
 
 /*========= ログイン ===========*/
-
 .card {
   margin: 50px 0;
 }
 
 /*========= 商品リスト ===========*/
-
 .mainContents {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -336,7 +325,6 @@ footer {
 }
 
 /*-------- 商品詳細 --------*/
-
 .itemTitle {
   margin-top: 50px;
   margin-bottom: 10px;
@@ -366,8 +354,7 @@ footer {
   font-size: 25px;
 }
 
-.star-rating:before,
-.star-rating:after {
+.star-rating:before, .star-rating:after {
   position: absolute;
   top: 0;
   left: 0;
@@ -436,8 +423,7 @@ footer {
   font-size: 17px;
 }
 
-.r-star-rating:before,
-.r-star-rating:after {
+.r-star-rating:before, .r-star-rating:after {
   position: absolute;
   top: 0;
   left: 0;
@@ -514,7 +500,7 @@ footer {
   display: inline-block;
 }
 
-.reviewName_after {
+.reviewName_san {
   display: inline-block;
   font-size: 0.5rem;
   margin-right: 30px;
@@ -537,7 +523,6 @@ footer {
 }
 
 /*-------- 口コミ投稿 --------*/
-
 .itemReviews {
   width: 100%;
   margin: 0 auto;
@@ -583,4 +568,3 @@ footer {
   margin: 0 0 0 auto;
   padding: 0 20px;
 }
-

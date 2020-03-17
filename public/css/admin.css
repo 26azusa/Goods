@@ -1,5 +1,4 @@
 /*-------- ITEM REGISTAR --------*/
-
 .itemRegistar {
   width: 900px;
   margin: 0 auto;
@@ -42,7 +41,6 @@
 }
 
 /*-------- ITEM INDEX --------*/
-
 .adminItemIndex {
   width: 1240px;
   margin: 0 auto;
@@ -72,4 +70,3 @@
   border: solid 1px #a9a9a9;
   border-radius: 10px;
 }
-
