@@ -1,65 +1,67 @@
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
+![Goods_top_image](https://user-images.githubusercontent.com/59946745/76386123-f71fd180-63a6-11ea-8d99-7d4ca2293c08.jpg)
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+## アプリ名
+&emsp;ディズニーお土産口コミサイト 「[**GOODS**](https://dgoodsreviews.herokuapp.com/)」<br>
+<br>
+ 
+## 概要
+&emsp;ディズニーリゾートで販売されている**グッズの口コミを投稿・閲覧できる**アプリ<br>
+<br>
+ 
+## 開発目的
+* ディズニーリゾートは年々来園者が増加しており、混雑した店内でお土産を探すことは大変である<br>
+→ 来園前やアトラクションの待ち時間などを有効利用し、**事前にグッズ情報を閲覧することができる**ものが<br>
+&emsp;&nbsp;あると良いのではないか<br>
+* ディズニーリゾートはグッズの種類がとてつもなく多く、特にお菓子や食品は味を確かめることができない<br>
+→ **他の購入者の口コミを見ることで商品の良し悪しを確認することができる**と良いのではないか <br>
 
-## About Laravel
+&emsp;&emsp;上記の2点の目的より、このアプリを開発。<br>
+<br>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
+## 使用した言語、ツール
+&emsp;Laravel / PHP / HTML / SCSS /  JavaScript / MYSQL / Apache / Amazon S3 / Heroku / VScode<br>
+<br>
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 仕様
+1. &nbsp;トップページもしくはヘッダーの「口コミを見る」から**商品の一覧を確認**できる。<br>
+2. &nbsp;商品の一覧ページでは**検索機能**、カテゴリごとの**絞り込み機能**が使用できる。<br>
+3. &nbsp;商品写真をクリックすることで**商品の詳細と口コミを確認**できる。<br>
+4. &nbsp;口コミには**5段階の評価を表示**、詳細ページ上部から**商品ごとの評価平均も確認**できる。<br>
+5. &nbsp;トップページもしくは商品詳細ページの「口コミを投稿する」から**口コミの投稿**ができる。<br>
+   &nbsp;ただし、口コミ投稿前にログインページに移るように設定。<br>
+6. &nbsp;管理者画面 ~/admin/より管理者ページに移動、登録している商品の一覧が確認できる。<br>
+   &nbsp;この管理者画面より**商品の登録、編集**をすることができる。<br>
+<br>
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications.
+## 開発期間
+&emsp;約3週間<br>
+&emsp;&emsp;アイデア出し、リーンキャンバス、ワイヤーフレームの作成（2日）<br>
+&emsp;&emsp;→ デザインカンプ作成 （2日） → データベース設計（1日） → 環境構築（1日）<br>
+&emsp;&emsp;→ 開発着手 → 基本機能実装完了（約2週間） → デザイン修正（2-3日） → 機能付与 （現在）<br>
+<br>
 
-## Learning Laravel
+## 開発時に意識したこと
+1. &nbsp;開発時にわからないことがあれば、とことん調べる。調べて該当する記事があれば<br>
+   &nbsp;そのまま模写するのではなく、**ロジックを理解してから**実装に進む。
+2. &nbsp;調べる際は時間を区切って、時間内に理解出来なければメンターに質問する。<br>
+   &nbsp;質問の際は「**わからないこと**」「**達成したいこと**」「**自分で試したこと**」を明確にしてから質問する。
+3. &nbsp;**複数の書き方がある際は、実際に試してみる。**
+4. &nbsp;後々コードを見てわかるように、なるべく**シンプルでまとまったコード**を書く。
+5. &nbsp;デザイン作成時は**人の目の動線**を気にする。<br>
+<br>
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of any modern web application framework, making it a breeze to get started learning the framework.
+## 開発時に苦労したこと
+1. &nbsp;HTML,CSSは独学で学習していたものの、開発当初デザインカンプを形に起こすことが出来なかった。<br>
+   &nbsp;→&emsp;noteで初心者用のHTML,CSS学習プログラムを購入し、<br>
+   &nbsp;&emsp;&emsp;**サイトの模写**を行うことで、**それぞれのコードによってどのように動くのか**理解することが出来た。<br>
+2. &nbsp;ユーザー、商品、口コミ、カテゴリ、それぞれの**データの関連付け**が難しかった。<br>
+   &nbsp;→&emsp;**リレーションをノートに書いて整理**した。<br>
+   &nbsp;&emsp;&emsp;コードは自分で調べたのち、メンターに確認して理解することが出来た。<br>
+<br>
 
-If you're not in the mood to read, [Laracasts](https://laracasts.com) contains over 1100 video tutorials on a range of topics including Laravel, modern PHP, unit testing, JavaScript, and more. Boost the skill level of yourself and your entire team by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for helping fund on-going Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell):
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## 今後追加していきたい機能
+1. &nbsp;管理者用と一般ユーザー用のログイン機能の区別
+2. &nbsp;レスポンシブ対応（ユーザーのほとんどがパーク内で閲覧するため必須）
+3. &nbsp;口コミのいいね機能<br>
+※&nbsp;機能付与の段階でリファクタリングも合わせて行う
+<br>
