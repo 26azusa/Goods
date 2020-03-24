@@ -21,9 +21,9 @@
 
 @media screen and (min-width:768px) and (max-width:1023px) {
     /*　for iPad 　*/
-
-    /*========= header ===========*/
-    .right-nav .navList {
+    /*========= トップページ ===========*/
+    /*====== header ========*/
+    .left-nav .navList {
         display: none;
     }
 
@@ -32,13 +32,124 @@
         padding-top: 120px;
     }
 
+    .right-nav ul li {
+        margin-left: 30px;
+        margin-bottom: 0.5rem;
+    }
+
+    /*-- ハンバーガーメニュー --*/
+    /*- クリック前 三本線-*/
+    .nav_toggle {
+        display: block;
+        position: relative;
+        width: 1.75rem;
+        height: 1.5rem;
+    }
+    .nav_toggle i {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: #333;
+        position: absolute;
+        transition: transform .5s, opacity .5s;
+    }
+    .nav_toggle i:nth-child(1) {
+        top: 0;
+    }
+    .nav_toggle i:nth-child(2) {
+        top: 0;
+        bottom: 0;
+        margin: auto;
+    }
+    .nav_toggle i:nth-child(3) {
+        bottom: 0;
+    }
+
+    /*- クリック後 ばつ印-*/
+    .nav_toggle.show i:nth-child(1) {
+        transform: translateY(10px) rotate(-45deg);
+    }
+    .nav_toggle.show i:nth-child(2) {
+        opacity: 0;
+    }
+    .nav_toggle.show i:nth-child(3) {
+        transform: translateY(-12px) rotate(45deg);
+    }
+
+    /*- クリック前 メニューリスト-*/
+    .nav_menu {
+        position: fixed;
+        top: 70px;
+        right: 0;
+        bottom: 0;
+        padding: 1rem;
+        opacity: 0;
+        width: 200px;
+        visibility: hidden;
+        transition: opacity .5s, visibility .5s;
+    }
+
+    .right-nav ul {
+        display: block;
+    }
+
+    /*- クリック後 メニューリスト-*/
+    .nav_menu.show {
+        opacity: 1;
+        visibility: visible;
+        background-color: rgba(255,255,255,0.6);
+        width: 200px;
+    }
+
+    .right-nav.show ul {
+        display: block;
+    }
+
+    /*====== CONCEPT ========*/
+    .concepts ul {
+        display: block;
+        width: 100%;
+    }
+
+    .concepts li {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding-bottom: 20px;
+        margin: 0 auto;
+    }
+
+    .concepts li:nth-child(2){
+        flex-direction: row-reverse;
+        margin: 0 0 0 auto;
+    }
+
+    .concepts figure {
+        width: 45%;
+    }
+
+    .concepts img {
+        height: 200px;
+    }
+
+    .concepts .concept {
+        width: 55%;
+        padding-top: 20px;
+        padding-left: 50px;
+    }
+
+    .concepts .concept.center {
+        padding-left: 0;
+    }
+
 }
+
 
 @media screen and (max-width:767px) {
     /*　for iPhone　*/
 
     /*========= header ===========*/
-     .right-nav .navList {
+    .left-nav .navList {
         display: none;
     }
 
@@ -46,4 +157,78 @@
         height: 450px;
         padding-top: 120px;
     }
+
+    .right-nav ul li {
+        margin-left: 30px;
+        margin-bottom: 0.5rem;
+    }
+
+    /*-- ハンバーガーメニュー --*/
+    /*- クリック前 三本線-*/
+    .nav_toggle {
+        display: block;
+        position: relative;
+        width: 1.75rem;
+        height: 1.5rem;
+    }
+    .nav_toggle i {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: #333;
+        position: absolute;
+        transition: transform .5s, opacity .5s;
+    }
+    .nav_toggle i:nth-child(1) {
+        top: 0;
+    }
+    .nav_toggle i:nth-child(2) {
+        top: 0;
+        bottom: 0;
+        margin: auto;
+    }
+    .nav_toggle i:nth-child(3) {
+        bottom: 0;
+    }
+
+    /*- クリック後 ばつ印-*/
+    .nav_toggle.show i:nth-child(1) {
+        transform: translateY(10px) rotate(-45deg);
+    }
+    .nav_toggle.show i:nth-child(2) {
+        opacity: 0;
+    }
+    .nav_toggle.show i:nth-child(3) {
+        transform: translateY(-12px) rotate(45deg);
+    }
+
+    /*- クリック前 メニューリスト-*/
+    .nav_menu {
+        position: fixed;
+        top: 70px;
+        right: 0;
+        bottom: 0;
+        padding: 1rem;
+        opacity: 0;
+        width: 200px;
+        visibility: hidden;
+        transition: opacity .5s, visibility .5s;
+    }
+
+    .right-nav ul {
+        display: block;
+    }
+
+    /*- クリック後 メニューリスト-*/
+    .nav_menu.show {
+        opacity: 1;
+        visibility: visible;
+        background-color: rgba(255,255,255,0.6);
+        width: 200px;
+    }
+
+    .right-nav.show ul {
+        display: block;
+    }
+
 }

@@ -22,3 +22,8 @@ var scrollAnimationFunc = function () {
 }
 window.addEventListener('load', scrollAnimationFunc);
 window.addEventListener('scroll', scrollAnimationFunc);
+
+/*==== ヘッダー ハンバーガーメニュー ====*/
+$('.nav_toggle').on('click', function () {
+  $('.nav_toggle, .nav_menu, .right-nav').toggleClass('show');
+});
