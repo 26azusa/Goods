@@ -30,7 +30,7 @@
 
   <div class="rightContents">
     <section class="itemList">
-      <h3>商品リスト</h3>
+      <h1 class="logo">PRODUCT</h3>
 
       <div class="items">
         @foreach($posts as $post)

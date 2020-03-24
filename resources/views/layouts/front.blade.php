@@ -33,13 +33,14 @@
         <div class ="content-wrapper header-nav">
                 <div class="right-nav">
                     <ul>
-                    <li><a class="logo" href="{{  action('GoodsController@index')  }}">GOODS</a></li>
-                    <li><a class="post" href="{{  action('ItemController@list')  }}">口コミを見る</a></li>
+                    <li><a class="navLogo" href="{{  action('GoodsController@index')  }}">GOODS</a></li>
+                    <li><a class="navList" href="{{  action('ItemController@list')  }}">口コミを見る</a></li>
                     </ul>
                 </div>
                 <div class="left-nav">
                 @guest
                     <ul>
+                    <li><a class="navList" href="{{  action('ItemController@list')  }}">口コミを見る</a></li>
                     <li><a class="navRegister" href="{{ route('register') }}">新規登録</a></li>
                     <li><a class="navLogin" href="{{ route('login') }}">ログイン</a></li>
                     </ul>

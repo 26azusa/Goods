@@ -1,25 +1,49 @@
 @charset "UTF-8";
 
 /*========= レスポンシブ対応用SCSS ===========*/
+@media screen and (min-width:1241px) {
+    /*　for PC*/
 
-@media screen and (min-width:480px) and (min-width:768px) {
-    /*　for iPhone Landscape　(iPhone 横)　*/
-   /* .mainvisual {
-        height: 450px;
-        padding-top: 120px;
-    }*/
-
+    /*========= header ===========*/
+    .left-nav .navList {
+        display: none;
+    }
 }
+
+@media screen and (min-width:1024px) and (max-width:1240px) {
+    /*　for PC*/
+
+    /*========= header ===========*/
+     .left-nav .navList {
+        display: none;
+    }
+}
+
 @media screen and (min-width:768px) and (max-width:1023px) {
     /*　for iPad 　*/
-   /* .mainvisual {
+
+    /*========= header ===========*/
+    .right-nav .navList {
+        display: none;
+    }
+
+   .mainvisual {
         height: 450px;
         padding-top: 120px;
-    }*/
+    }
 
 }
-@media screen and (min-width:1024px) and (max-width:1250px) {
-    /*　for PC　*/
 
+@media screen and (max-width:767px) {
+    /*　for iPhone　*/
 
+    /*========= header ===========*/
+     .right-nav .navList {
+        display: none;
+    }
+
+   .mainvisual {
+        height: 450px;
+        padding-top: 120px;
+    }
 }
