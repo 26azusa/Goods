@@ -32,10 +32,10 @@
     <section class="itemList">
       <h1 class="logo">PRODUCT</h3>
 
-      <div class="items">
+      <div class="items js-trigger">
         @foreach($posts as $post)
         <div class="item">
-          <a href="{{  action('ItemController@detail',['id' => $post->id])  }}"><img class="sa sa--scaleUp" src="{{ $post->image_path }}"></a>
+          <a href="{{  action('ItemController@detail',['id' => $post->id])  }}"><img class="fade-elem-list" src="{{ $post->image_path }}"></a>
           <p>{{ $post->name }}</p>
         </div>
         @endforeach

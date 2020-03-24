@@ -76,30 +76,30 @@ module.exports = __webpack_require__(48);
 /***/ 48:
 /***/ (function(module, exports) {
 
-var scrollAnimationElm = document.querySelectorAll('.sa');
-var scrollAnimationFunc = function scrollAnimationFunc() {
-  for (var i = 0; i < scrollAnimationElm.length; i++) {
-    var triggerMargin = 100;
-    var elm = scrollAnimationElm[i];
-    var showPos = 0;
-    if (elm.dataset.sa_margin != null) {
-      triggerMargin = parseInt(elm.dataset.sa_margin);
-    }
-    if (elm.dataset.sa_trigger) {
-      showPos = document.querySelector(elm.dataset.sa_trigger).getBoundingClientRect().top + triggerMargin;
-    } else {
-      showPos = elm.getBoundingClientRect().top + triggerMargin;
-    }
-    if (window.innerHeight > showPos) {
-      var delay = elm.dataset.sa_delay ? elm.dataset.sa_delay : 0;
-      setTimeout(function (index) {
-        scrollAnimationElm[index].classList.add('show');
-      }.bind(null, i), delay);
-    }
-  }
-};
-window.addEventListener('load', scrollAnimationFunc);
-window.addEventListener('scroll', scrollAnimationFunc);
+/*==== スクロール アニメーション ====*/
+
+$(function () {
+
+  $(window).scroll(function () {
+    var fadeTrigger = $('.js-trigger');
+    $(fadeTrigger).each(function () {
+      var scroll = $(window).scrollTop(),
+          elemTop = $(this).offset().top,
+          windowHeight = $(window).height();
+
+      if (scroll > elemTop - 2 * windowHeight / 3) {
+        $(this).find('.fade-elem-news').addClass('fade-up');
+      }
+
+      if (scroll > elemTop - windowHeight / 2) {
+        $(this).find('.fade-elem').addClass('fade-up');
+        $(this).find('.fade-elem-top').addClass('fade-up');
+        $(this).find('.fade-elem-list').addClass('fade-up');
+      }
+    });
+  });
+  $(window).trigger('scroll');
+});
 
 /*==== ヘッダー ハンバーガーメニュー ====*/
 $('.nav_toggle').on('click', function () {

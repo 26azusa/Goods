@@ -140,7 +140,7 @@ header {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 360px;
-  margin: 0 auto;
+  margin: 20px auto;
 }
 
 .top_button li a {
@@ -256,32 +256,76 @@ header {
   margin: 0;
 }
 
-.sa {
+.fade-elem {
+  -webkit-transition: .6s;
+  transition: .6s;
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
   opacity: 0;
-  -webkit-transition: all .8s ease;
-  transition: all .8s ease;
+  margin-bottom: 10px;
 }
 
-.sa.show {
+.fade-elem-top {
+  -webkit-transition: .6s;
+  transition: .6s;
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+  opacity: 0;
+  margin-bottom: 10px;
+}
+
+.fade-elem-list {
+  -webkit-transition: .6s;
+  transition: .6s;
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+  opacity: 0;
+  margin-bottom: 10px;
+}
+
+.fade-elem-news {
+  -webkit-transition: .6s;
+  transition: .6s;
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+  opacity: 0;
+  margin-bottom: 10px;
+}
+
+.fade-elem:last-of-type {
+  margin-bottom: 0;
+}
+
+.top_logo.fade-elem-top {
+  -webkit-transition-delay: .3s;
+          transition-delay: .3s;
+}
+
+.top_button .fade-elem-top {
+  -webkit-transition-delay: .6s;
+          transition-delay: .6s;
+}
+
+.fade-up {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
   opacity: 1;
-  -webkit-transform: none;
-          transform: none;
 }
 
-.sa--scaleUp {
-  -webkit-transform: scale(1);
-          transform: scale(1);
+.concepts .center.fade-elem {
+  -webkit-transition-delay: .3s;
+          transition-delay: .3s;
 }
 
-.sa--up {
-  -webkit-transform: translate(0, 100px);
-          transform: translate(0, 100px);
+.concepts .right.fade-elem {
+  -webkit-transition-delay: .6s;
+          transition-delay: .6s;
 }
 
 .news {
   width: 87%;
   margin: 0 auto;
-  margin-bottom: 100px;
+  margin-bottom: 150px;
 }
 
 .news .logo {
@@ -310,7 +354,7 @@ header {
 }
 
 footer {
-  height: 60px;
+  height: 70px;
   width: 100%;
   background-color: #808080;
 }
@@ -566,11 +610,11 @@ footer {
   height: 550px;
   -o-object-fit: cover;
      object-fit: cover;
-  margin-bottom: 20px;
 }
 
 .itemDescription h5 {
   text-align: right;
+  margin-top: 20px;
   margin-bottom: 15px;
 }
 

@@ -54,8 +54,8 @@
       </div>
         <p>{{ $item_form->description }}</p>
 
-      <div class="itemDescription">
-        <img class=" sa sa--scaleUp" src="{{ $item_form->image_path }}">
+      <div class="itemDescription js-trigger">
+        <img class="fade-elem" src="{{ $item_form->image_path }}">
         <h5>{{ $item_form->quantity }}入り　{{ $item_form->price }}円</h5>
       </div>
 

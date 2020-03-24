@@ -3,7 +3,7 @@
 @media screen and (min-width: 1241px) {
   /*　for PC*/
   /*========= header ===========*/
-  .left-nav .navList {
+  .right-nav .navList {
     display: none;
   }
 }
@@ -11,7 +11,7 @@
 @media screen and (min-width: 1024px) and (max-width: 1240px) {
   /*　for PC*/
   /*========= header ===========*/
-  .left-nav .navList {
+  .right-nav .navList {
     display: none;
   }
 }
