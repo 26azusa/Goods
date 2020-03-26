@@ -281,6 +281,8 @@ header {
           transform: translateY(2px);
   opacity: 0;
   margin-bottom: 10px;
+  -webkit-transition-delay: .8s;
+          transition-delay: .8s;
 }
 
 .fade-elem-news {
