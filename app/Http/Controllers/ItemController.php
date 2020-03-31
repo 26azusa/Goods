@@ -29,7 +29,7 @@ class ItemController extends Controller
             $posts = Item::orderBy('id')->get();
         }
 
-        return view('item.list', ['posts' => $posts, 'categories' => $categories, 'cond_name' => $cond_name, 'catedory_id' => $category_id,]);
+        return view('item.list', ['posts' => $posts, 'categories' => $categories, 'cond_name' => $cond_name, 'category_id' => $category_id,]);
     }
 
     //商品詳細表示

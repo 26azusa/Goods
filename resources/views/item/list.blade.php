@@ -16,7 +16,8 @@
 
         @foreach($categories as $category)
         <div class="selectCategory">
-        <input type="radio" class="form-select" name="category_id" value="{{ $category->id }}"> {{ $category->name }}
+        <input type="radio" class="form-select" name="category_id" value="{{ $category->id }}"
+        <?php if($category_id == $category->id) {echo 'checked';} ?> > {{ $category->name }}
         </div>
         @endforeach
         </div>
